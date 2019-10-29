@@ -25,3 +25,25 @@ $header.classList.add('highlight')
 
 $header.style.color = 'red'
 $header.style.backgroundColor = 'yellow'
+
+$list.innerHTML += '<li>Flour</li>'
+for (const fruit of fruits) {
+  $list.innerHTML += `<li>${fruit}</li>`
+}
+
+const $boxes = document.getElementById('boxes')
+
+// for (let i=0; i<1000; i++){
+// for (const color of colors) {
+//   $boxes.innerHTML += `<div class="box" style="background-color: ${color};">`
+// }
+// }
+
+const boxes = []
+for (let i = 0; i < 10; i++) {
+  for (const color of colors) {
+    boxes.push(`<div class="box" style="background-color: ${color};"></div>`)
+  }
+}
+
+$boxes.innerHTML += boxes.join('')
